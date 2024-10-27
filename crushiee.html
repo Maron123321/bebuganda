@@ -4,33 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello pi :)</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+          background-image: url(bg.png);
+           
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Dark overlay for less brightness */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        img#ito-na {
+            width: 100%;
+            max-width: 250px;
+            height: 270px;
+        }
+
+        h1.line1 {
+            margin-top: 20px;
+            margin-bottom: 50px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* Container for photo and letter space */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Photo block */
+        .photo-space {
+            width: 100%;
+            height: 300px;
+            background-color: #cccccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 1.2rem;
+            border-radius: 8px;
+        }
+
+        /* Letter space */
+        .letter-space {
+            width: 100%;
+            height: 200px;
+            background-color: #ffffff;
+            padding: 15px;
+            color: #333;
+            font-size: 1rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            overflow-y: auto;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            h1.line1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
+     
+    <img src="bgs.gif" id="ito-na" alt="Responsive Image">
+    <h1 id="demo"></h1>
+    <h1 class="line1">Hi louise</h1>
 
- 
-    <img src="" 400px height="400px" id="ito na">
+    <!-- Container for photo space and letter space -->
+    <div class="container">
+        <div class="photo-space">
+          <img src="menbebu.jpg" id="ito-na" alt="Responsive Image">
+        </div>
+        <div class="letter-space">
+            <p>I'm sorry what i did last time on sm it's not supposed to be like I planned before nung inaaya palang kita sa sm last last month
+                I was surprised too parang wala akong nagawa that time at yung movie date lang ang natupad sa checklist ko I'm not doing well that time I'm kinda disappointed  
+                rin sa self ko maybe I'm just anxious or overwhelmed for some reason but louise I'll be sure it will never be like that again hope you understand rin na pwede ko namang gawin
+                more better and i want you to know that's not my i can do idk that time i feel like napapaiisip nalang ako bat ganun yung nangyayare, I know that's my mistake
+                that I made you feel that way without realizing it (my bad), Actually that's my first date mall near here sa place natin 
+                I learned a lot I will never let mistakes things happens again. Louise 
+                I'm being honest po sayo at all time I can't lie to you and I don't want everything ends up like this
 
-     <h1 id="demo"></h1>
+
+              </p>
+        </div>
+    </div>
+
+    <script>
+       alert ("Hi Louise<33");
+    </script>
+
 </body>
-<script>
-   
-    alert ("I'm sorry what i did last time in sm it's not supposed to be like I planned before nung inaaya palang kita sa sm last last month  I was surprised too ");
-   alert ("I'm sorry what i did last time in sm it's not supposed to be like I planned before nung inaaya palang kita sa sm last last month  I was surprised too ");
-
-  let text = "GUSTO MO BA TALAGA MALAMAN";
-  var image = document.getElementById("ito na");
-  if (confirm(text) == true) {
-    image.src = "try sa crushie.gif";
-    text = "Ganda niyo both ni fudgee";
-  } else {
-    image.src = "huhu.gif";
-    text = "HUHU";
-  }
-  document.getElementById("demo").innerHTML = text;
-
-</script>
-<style>
-    
-    
-</style>
 </html>
